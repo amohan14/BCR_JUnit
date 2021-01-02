@@ -1,0 +1,43 @@
+package CucumberFramework.steps;
+
+import java.io.IOException;
+import java.nio.file.Paths;
+
+public class LoginSteps {
+	@Given("^I access webdriverunivsity\\.com$")
+	public void i_access_webdriverunivsity_com() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^I click on the login portal button$")
+	public void i_click_on_the_login_portal_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^I enter a username$")
+	public void i_enter_a_username() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^I enter a \"([^\"]*)\" password$")
+	public void i_enter_a_password(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^I click on the login button$")
+	public void i_click_on_the_login_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^I should be presented with a succesfful validation alert$")
+	public void i_should_be_presented_with_a_succesfful_validation_alert() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+}

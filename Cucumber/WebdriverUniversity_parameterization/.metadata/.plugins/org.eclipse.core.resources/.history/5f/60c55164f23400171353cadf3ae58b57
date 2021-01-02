@@ -1,0 +1,56 @@
+package CucumberFramework.steps;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class LoginSteps {
+	WebDriver driver;
+	
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\GBruno\\Desktop\\CucumberFramework\\CucumberFramework\\src\\test\\java\\CucumberFramework\\resources\\geckodriverr.exe");
+		this.driver = new ChromeDriver();
+		this.driver.manage().window().maximize();
+		this.driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+	}
+	
+	@Given("^User navigates to the mail website$")
+	public void user_navigates_to_the_mail_website() throws Throwable {
+		driver.get("https://www.mail.com/int");
+	}
+
+	@And("^user clicks on the login button$")
+	public void user_clicks_on_the_login_button() throws Throwable {
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(".//*[@id='login-button']")).click();
+	}
+
+	@And("^User enters a correct username$")
+	public void user_enters_a_correct_username() throws Throwable {
+		System.out.println("user_enters_a_correct_username");
+	}
+
+	@And("^User enters a correct password$")
+	public void user_enters_a_correct_password() throws Throwable {
+		System.out.println("User enters a correct password");
+	}
+
+	@When("^User clicks on the Login button$")
+	public void user_clicks_on_the_Login_button() throws Throwable {
+		System.out.println("User clicks on the Login button");
+	}
+
+	@Then("^User should be taken to the successful login page$")
+	public void user_should_be_taken_to_the_successful_login_page() throws Throwable {
+		System.out.println("User should be taken to the successful login page");
+	}
+}
